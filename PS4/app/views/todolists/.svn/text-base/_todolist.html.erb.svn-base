@@ -1,0 +1,5 @@
+<li id="<%=todolist.id%>" value="<%= todolist.sorted_order %>" class="ui-state-default">
+	<p class="descreption"><%= todolist.Todo %></p>
+   	<%= link_to 'Edit', edit_todolist_path(todolist), :remote => true %>
+   	<%= link_to 'Remove', todolist, :confirm => 'Are you sure?', :method => :delete, :remote => true, :class=>'delete_todo' %>
+</li>

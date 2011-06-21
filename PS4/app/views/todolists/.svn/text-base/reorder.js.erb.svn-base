@@ -1,0 +1,2 @@
+<% @newlist = Todolist.find(:all, :order=>'sorted_order') %>
+$('#sortable').html('<%= escape_javascript(render(@newlist)) %>').fadeIn();  

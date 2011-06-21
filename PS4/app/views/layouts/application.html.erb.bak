@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+	#sortable tr {
+    font-size: 1.0em;
+    margin: 0 3px 3px;
+    padding: 0.4em 0.4em 0.4em 1.5em;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    background: #E6E6E6;
+    border: 1px solid #D3D3D3;
+    color: #555555;
+    width: 400px;
+    font-weight: normal;
+}
+</style>
+
+
+
+<head>
+  <title>PS4</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag "jquery.js", "rails.js" %>
+  <%= javascript_include_tag "jquery.editinplace.js" %>
+  <%= javascript_include_tag "jquery-ui-1.8.11.custom.min.js" %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

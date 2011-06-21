@@ -1,0 +1,43 @@
+<h1>To-Do List</h1>
+
+
+
+<script>
+	$(document).ready(function(){
+	
+		$( "#sortable" ).sortable({
+			update: function() {
+			newOrder();
+			}
+		});
+
+		$( "#sortable" ).disableSelection();
+		
+		function newOrder(){
+      for(var i=1; i <= $("#sortable").children('li').length; i++){
+        var temp = $("#sortable").children('li')[i-1];
+        if(temp.value != i){
+          temp.value = i;
+          $.post("/todolists/"+temp.id+"/reorder", { id: temp.id, new_order: temp.value  })
+        }
+      }
+    }
+    
+	});
+		
+	
+</script>
+
+<%= render 'form' %>
+
+
+
+  
+<ul id="sortable" >
+<% @todolists.each do |todolist| %>
+	<%= render todolist%>
+<% end %>
+</ul>
+
+<br />
+
