@@ -1,0 +1,12 @@
+For this project I implemented an online to-do list using the jQuery ajax library.
+
+The entire UI for this application is a single page where users can type a to-do into a text field and click on a button next to the field labeled 'Add'. When a To-Do is added it should be saved to the server and then loaded below the text field on the page.
+
+If the user enters 5 items in the To-Do list, then those 5 items will appear beneath the text field in a single column.
+
+Specific features:
+
+    To-Dos will be saved to the server so that reloading the page does not lose any To-Dos.
+    It is possible to delete To-Dos by clicking on a 'Remove' link for each one.
+    It is possible to sort them by just dragging To-Dos up or down.
+    It is possible to edit them by clicking on an edit link next to the To-Do. 
